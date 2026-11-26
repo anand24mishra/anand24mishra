@@ -75,8 +75,7 @@ def fmt(n):
 def render(d, t):
     W = 880
     has_cal = "weeks" in d
-    H = 330 if has_cal else 200
-    b = [f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="10" fill="{t["card"]}" stroke="{t["line"]}"/>']
+    b = [""]  # frame filled in once the height is known
     # metrics
     metrics = [("repositories", d["repos"]), ("stars", d["stars"]), ("followers", d["followers"])]
     if has_cal:
@@ -113,18 +112,24 @@ def render(d, t):
         b.append(f'<circle cx="{lx + 5}" cy="{ly - 4}" r="5" fill="{LANG_COLORS.get(lang, t["muted"])}"/>'
                  f'<text x="{lx + 16}" y="{ly}" font-family="{MONO}" font-size="12" fill="{t["fg"]}">{esc(label)}</text>')
         lx += len(label) * 7.2 + 34
-    # contribution heatmap
+    # contribution heatmap: levels by quartile of active days, like GitHub's own graph
     if has_cal:
         weeks = d["weeks"][-53:]
-        peak = max((c for w in weeks for c in w), default=0) or 1
-        levels = [t["chip"], t["green"] + "55", t["green"] + "88", t["green"] + "bb", t["green"]]
-        y0, cell, gap = 196, 12, 3
-        x0 = W - 22 - len(weeks) * (cell + gap) + gap
-        b.append(f'<text x="22" y="{y0 - 10}" font-family="{MONO}" font-size="11" fill="{t["muted"]}">last 12 months</text>')
+        active = sorted(c for w in weeks for c in w if c)
+        qs = [active[int(len(active) * q)] for q in (0.25, 0.5, 0.75)] if active else [1, 1, 1]
+        levels = [t["chip"], t["green"] + "55", t["green"] + "99", t["green"] + "cc", t["green"]]
+        gap = 3
+        cell = (W - 44 + gap) / len(weeks) - gap
+        y0 = ly + 40
+        b.append(f'<text x="22" y="{y0 - 10}" font-family="{MONO}" font-size="11" fill="{t["muted"]}">contributions · last 12 months</text>')
         for wi, week in enumerate(weeks):
             for di, c in enumerate(week):
-                lvl = 0 if c == 0 else min(4, 1 + int(3 * c / peak))
-                b.append(f'<rect x="{x0 + wi * (cell + gap)}" y="{y0 + di * (cell + gap)}" width="{cell}" height="{cell}" rx="2.5" fill="{levels[lvl]}"/>')
+                lvl = 0 if c == 0 else 1 + sum(c > q for q in qs)
+                b.append(f'<rect x="{22 + wi * (cell + gap):.1f}" y="{y0 + di * (cell + gap):.1f}" width="{cell:.1f}" height="{cell:.1f}" rx="2" fill="{levels[lvl]}"/>')
+        H = int(y0 + 7 * (cell + gap) + 18)
+    else:
+        H = int(ly + 26)
+    b[0] = f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="10" fill="{t["card"]}" stroke="{t["line"]}"/>'
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
             f'aria-label="GitHub stats: {d["repos"]} repositories, {d["stars"]} stars"><title>GitHub stats</title>{"".join(b)}</svg>')
 
