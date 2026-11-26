@@ -28,10 +28,7 @@
 
 ## GitHub
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api?username=anand24mishra&show_icons=true&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&title_color=4493f8&icon_color=3fb950&text_color=8b949e" alt="GitHub stats">
-  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=anand24mishra&layout=compact&theme=transparent&hide_border=true&langs_count=6&title_color=4493f8&text_color=8b949e" alt="Top languages">
-</p>
+<a href="https://github.com/anand24mishra?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg"><img src="assets/stats-light.svg" width="100%" alt="GitHub stats"></picture></a>
 
 ### Recent activity
 
