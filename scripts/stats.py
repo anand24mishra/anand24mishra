@@ -82,6 +82,8 @@ def render(d, t):
     if has_cal:
         metrics = [("contributions · 1y", d["contributions"]), ("commits · 1y", d["commits"]),
                    ("pull requests · 1y", d["prs"])] + metrics
+    # small social counts read as a negative, so show them only once they mean something
+    metrics = [(k, v) for k, v in metrics if k not in ("stars", "followers") or v >= 10]
     cw = (W - 44) / len(metrics)
     for i, (label, val) in enumerate(metrics):
         x = 22 + i * cw
