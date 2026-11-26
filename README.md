@@ -1,50 +1,39 @@
-# Anand Mishra
+<div align="center">
 
-Backend and infrastructure engineer. B.Tech in AI/ML at Newton School of Technology, based in Sonipat, India.
+<a href="https://anandmishra.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg"><img src="assets/banner-light.svg" width="100%" alt="banner"></picture></a>
 
-I like owning the whole path: the API, the CI pipeline, and the cluster it ends up running on.
+<a href="https://anandmishra.dev"><img src="https://img.shields.io/badge/anandmishra.dev-1f2328?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio"></a>
+<a href="https://www.linkedin.com/in/anand-mishra-a3a306225"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+<a href="mailto:anandmishra3001@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
 
-[anandmishra.dev](https://anandmishra.dev) · [LinkedIn](https://www.linkedin.com/in/anand-mishra-a3a306225) · [anandmishra3001@gmail.com](mailto:anandmishra3001@gmail.com)
+</div>
 
 ## Projects
 
-**[CloudForge](https://github.com/anand24mishra/CloudForge)**<br>
-A small PaaS in Go that turns a Git repository into a Kubernetes deployment. It detects the stack, builds with Docker or Buildpacks, and deploys through Helm and Argo CD. Includes Terraform for a k3s cluster on Oracle Cloud and a local `kind` setup.<br>
-<sub>Go · Kubernetes · Helm · Argo CD · Terraform · GitHub Actions</sub>
-
-**[DRK/MTTR](https://github.com/anand24mishra/nanoreach-platform)**<br>
-A contest marketplace for YouTube creators. Brands fund a prize pool held in escrow, entries are ranked on YouTube-verified views and tracked referral clicks, and fraud checks filter out fake traffic.<br>
-<sub>React · Express · Prisma · MongoDB · Razorpay · YouTube Data API</sub>
-
-**[FinSaathi](https://github.com/anand24mishra/FinSaathi)**<br>
-A Hindi and English app for Indian retail investors: live NSE quotes, stock research, portfolio tracking, mutual funds, and price alerts over push and Telegram.<br>
-<sub>Fastify · TypeScript · Expo · React Native · MongoDB · WebSockets</sub>
-
-**[DevDeck](https://github.com/anand24mishra/DevDeck)**<br>
-A macOS app that shows your dev processes, ports and Docker containers grouped by project, and stops a whole stack in one click.<br>
-<sub>Electron · React · TypeScript · dockerode · Playwright</sub>
-
-**[TermPlayer](https://github.com/anand24mishra/termplayer)**<br>
-A keyboard-driven music player for the terminal, with Hindi radio, DJ tools and its own renderer. Try it: `npx @anand24/termplayer`<br>
-<sub>Node.js · VLC</sub>
+<a href="https://github.com/anand24mishra/CloudForge"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-cloudforge-dark.svg"><img src="assets/card-cloudforge-light.svg" width="49%" alt="card-cloudforge"></picture></a> <a href="https://github.com/anand24mishra/nanoreach-platform"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-drk-dark.svg"><img src="assets/card-drk-light.svg" width="49%" alt="card-drk"></picture></a>
+<a href="https://github.com/anand24mishra/FinSaathi"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-finsaathi-dark.svg"><img src="assets/card-finsaathi-light.svg" width="49%" alt="card-finsaathi"></picture></a> <a href="https://github.com/anand24mishra/DevDeck"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-devdeck-dark.svg"><img src="assets/card-devdeck-light.svg" width="49%" alt="card-devdeck"></picture></a>
+<a href="https://github.com/anand24mishra/termplayer"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/termplayer-dark.svg"><img src="assets/termplayer-light.svg" width="100%" alt="termplayer"></picture></a>
 
 ## How CloudForge ships an app
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/cloudforge-dark.svg">
-  <img src="assets/cloudforge-light.svg" width="100%" alt="CloudForge deploy path: Git repo, cloudforge init, GitHub Actions, GHCR, deploy-config, Argo CD, Helm chart, k3s or kind, Traefik, app">
-</picture>
+<a href="https://github.com/anand24mishra/CloudForge"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cloudforge-dark.svg"><img src="assets/cloudforge-light.svg" width="100%" alt="cloudforge"></picture></a>
 
 ## Tools
 
-- **Languages:** TypeScript, JavaScript, Go, Python, SQL
-- **Backend:** Node.js, Express, Fastify, Prisma, REST, WebSockets, OAuth 2.0, JWT
-- **Frontend:** React, Next.js, Redux, Tailwind, React Native (Expo), Electron
-- **Data:** MongoDB, MySQL, Kafka
-- **Infra:** Docker, Kubernetes, Helm, Argo CD, Terraform, Nginx, Traefik, AWS, GCP
-- **Observability and testing:** Prometheus, Grafana, Loki, Jest, Vitest, Cypress, Playwright, k6
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=go,ts,js,py,nodejs,express,react,nextjs,redux,tailwind,electron,mongodb,mysql,prisma,kafka&perline=15" alt="Languages, frameworks and databases"><br>
+  <img src="https://skillicons.dev/icons?i=docker,kubernetes,terraform,nginx,aws,gcp,prometheus,grafana,githubactions,jest,linux,git&perline=15" alt="Infrastructure and tooling">
+</p>
+<p align="center"><sub>Also: Fastify · Helm · Argo CD · Traefik · Loki · Vitest · Cypress · Playwright · k6</sub></p>
 
-## Recent activity
+## GitHub
+
+<p align="center">
+  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api?username=anand24mishra&show_icons=true&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&title_color=4493f8&icon_color=3fb950&text_color=8b949e" alt="GitHub stats">
+  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=anand24mishra&layout=compact&theme=transparent&hide_border=true&langs_count=6&title_color=4493f8&text_color=8b949e" alt="Top languages">
+</p>
+
+### Recent activity
 
 <!-- LIVE-TAIL:START -->
 - 2026-11-25: Forked rajdeep-2004/dualpath
