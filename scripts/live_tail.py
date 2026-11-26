@@ -57,7 +57,8 @@ def describe(e, user):
 
 def render(events, user):
     lines, seen = [], set()
-    for e in events:
+    # the events API is not strictly time-ordered; newest first
+    for e in sorted(events, key=lambda e: e["created_at"], reverse=True):
         d = describe(e, user)
         if not d or (d[1], d[2]) in seen:  # collapse repeated pushes to the same branch
             continue
