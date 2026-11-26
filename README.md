@@ -1,244 +1,80 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=slice&height=200&color=0:434343,100:000000&text=Anand%20Mishra&fontSize=50&fontColor=ffffff&fontAlignY=30&desc=Backend%20Developer%20%7C%20MERN%20Stack&descSize=16&descAlignY=50"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/terminal-dark.svg">
+  <img src="assets/terminal-light.svg" width="100%" alt="anand@prod:~$ whoami → Anand Mishra, backend & cloud-native engineer. kubectl get pods shows api-node-express, web-react-next and btech-ai-ml running, learning-loop restarting forever.">
+</picture>
 
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=2300&pause=850&color=FFFFFF&center=true&vCenter=true&repeat=true&width=1000&lines=const+developer+%3D+new+Developer(%22Anand%22);+developer.skills+%3D+%5B%22Node.js%22%2C+%22React%22%2C+%22MongoDB%22%5D;+developer.code()+%7C%7C+developer.learn();+console.log(%22Building+amazing+things!%22);"/>
-</a>
-
-<p>
-  <img src="https://komarev.com/ghpvc/?username=anand-242003&label=Profile%20Views&color=0e75b6&style=flat-square" alt="Profile Views"/>
-  <img src="https://img.shields.io/github/followers/anand-242003?label=Followers&style=flat-square&color=0e75b6" alt="Followers"/>
-  <img src="https://img.shields.io/github/stars/anand-242003?label=Stars&style=flat-square&color=0e75b6" alt="Stars"/>
-</p>
-
-<p>
-  <a href="https://anandmishra.dev">
-    <img src="https://img.shields.io/badge/Portfolio-FF5E5B?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/>
-  </a>
-  <a href="https://www.linkedin.com/in/anand-mishra-a3a306225">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-  <a href="https://github.com/anand-242003">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
-  </a>
-  <a href="mailto:anandmishra3001@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-  </a>
-</p>
+<a href="https://anandmishra.dev"><img src="https://img.shields.io/badge/anandmishra.dev-0d1117?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio"></a>
+<a href="https://www.linkedin.com/in/anand-mishra-a3a306225"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+<a href="mailto:anandmishra3001@gmail.com"><img src="https://img.shields.io/badge/anandmishra3001@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
+<img src="https://komarev.com/ghpvc/?username=anand24mishra&label=visitors&color=2f81f7&style=flat-square" alt="Profile views">
 
 </div>
 
-## About Me
+I build **backends that stay up** — Node/Express APIs, event pipelines on Kafka, and the Docker → Kubernetes → Helm plumbing that ships them.
+B.Tech in AI/ML at **Newton School of Technology**, currently going deep on cloud-native architecture and systems that scale.
 
-<img align="right" alt="Developer" width="400" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif">
+## ⎈ `anand.sys` — my stack, running
 
-```typescript
-interface Developer {
-  name: string;
-  location: string;
-  education: string;
-  role: string;
-  expertise: string[];
-  devops: string[];
-  currentFocus: string[];
-}
+Instead of a wall of badges: here's the stack as the system I'd actually deploy. Requests flow left to right, CI/CD rolls out from the top, Prometheus keeps watch.
 
-const anand: Developer = {
-  name: "Anand Mishra",
-  location: "Sonipat, Haryana, India",
-  education: "B.Tech in AI/ML @ Newton School of Technology",
-  role: "Full-Stack Developer",
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/system-dark.svg">
+  <img src="assets/system-light.svg" width="100%" alt="Architecture diagram: React/Next.js client → Nginx gateway (JWT) → three Node/Express pods in a Kubernetes namespace → Kafka → MongoDB and MySQL; Prometheus scrapes the pods; GitHub Actions, Jest/Cypress/k6, Docker and Helm form the deploy pipeline.">
+</picture>
 
-  expertise: [
-    "TypeScript & JavaScript (ES6+)",
-    "React.js, Next.js, Redux",
-    "Node.js, Express.js, REST APIs",
-    "MongoDB, MySQL, Prisma ORM",
-    "OAuth 2.0, JWT, Firebase",
-    "Jest, Cypress, k6 Load Testing"
-  ],
+<details>
+<summary><b>📄 <code>values.yaml</code></b> — the full manifest</summary>
 
-  devops: [
-    "Docker & Docker Compose",
-    "Kubernetes & Helm",
-    "GitHub Actions CI/CD",
-    "Google Cloud Platform & AWS",
-    "Nginx, Prometheus, Kafka"
-  ],
+```yaml
+anand:
+  role: backend / full-stack engineer
+  location: Sonipat, Haryana, IN
+  education: B.Tech AI/ML @ Newton School of Technology
 
-  currentFocus: [
-    "Cloud-Native Architecture",
-    "Scalable Backend Systems",
-    "Full-Stack Development",
-    "Building Real-World Projects"
-  ]
-};
+  languages:  [TypeScript, JavaScript, Python, SQL]
+  frontend:   [React, Next.js, Redux, Vite, Tailwind, Material UI, Three.js, Chart.js]
+  backend:    [Node.js, Express, REST, Prisma, Passport.js, OAuth 2.0, JWT, Firebase]
+  data:       [MongoDB, MySQL, Kafka]
+  infra:      [Docker, Compose, Kubernetes, Helm, Nginx, AWS, GCP, Vercel]
+  ci_cd:      [GitHub Actions]
+  observability: [Prometheus]
+  testing:    [Jest, Cypress, k6 load tests]
+
+  resources:
+    requests: { coffee: 2 cups/day, sleep: negotiable }
+    limits:   { scope_creep: 0 }
+
+  readinessProbe: "open to collaboration & interesting backend problems"
 ```
 
-<br clear="right"/>
-
-## Tech Stack & Tools
-
-<div align="center">
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
-<img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js"/>
-<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
-<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
-<img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux"/>
-<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
-<img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white" alt="Three.js"/>
-<img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white" alt="Chart.js"/>
-<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind"/>
-<img src="https://img.shields.io/badge/Material_UI-0081CB?style=for-the-badge&logo=mui&logoColor=white" alt="Material UI"/>
-<img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
-<img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma"/>
-<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase"/>
-<img src="https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white" alt="Kafka"/>
-<img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT"/>
-<img src="https://img.shields.io/badge/OAuth_2.0-EB5424?style=for-the-badge&logo=auth0&logoColor=white" alt="OAuth 2.0"/>
-<img src="https://img.shields.io/badge/Passport.js-34E27A?style=for-the-badge&logo=passport&logoColor=white" alt="Passport.js"/>
-<img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" alt="Jest"/>
-<img src="https://img.shields.io/badge/Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=white" alt="Cypress"/>
-<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
-<img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes"/>
-<img src="https://img.shields.io/badge/Helm-0F1689?style=for-the-badge&logo=helm&logoColor=white" alt="Helm"/>
-<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions"/>
-<img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS"/>
-<img src="https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="GCP"/>
-<img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" alt="Nginx"/>
-<img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white" alt="Prometheus"/>
-<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
-<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman"/>
-<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"/>
-<img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" alt="Jira"/>
-<img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint"/>
-<img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code"/>
-</div>
-
-## GitHub Analytics
-
-<div align="center">
-
-<a href="https://github.com/anand-242003">
-  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=anand-242003&show_icons=true&theme=dark&include_all_commits=true&count_private=true&hide_border=true" alt="GitHub Stats"/>
-  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=anand-242003&layout=compact&theme=dark&hide_border=true&langs_count=6" alt="Top Languages"/>
-</a>
-
-<br/>
-
-<a href="https://github.com/anand-242003">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=anand-242003&theme=github-compact&hide_border=true&area=true" alt="Contribution Graph"/>
-</a>
-
-</div>
-
-## Play Code Defender! 
-
-<div align="center">
-
-<a href="https://anand-242003.github.io/contact-page/game.html">
-  <img src="https://img.shields.io/badge/Play_Code_Defender-FF6B6B?style=for-the-badge&logo=gamepad&logoColor=white" alt="Play Game"/>
-</a>
-
-*Space Invaders style game! Defend your code from bugs!*
-
-</div>
-
-## Code Philosophy
-
-<div align="center">
-
-<table>
-<tr>
-<td align="center" width="50%">
-
-*"Talk is cheap. Show me the code."*
-
-**Linus Torvalds**
-
-</td>
-<td align="center" width="50%">
-
-*"Simplicity is the soul of efficiency."*
-
-**Austin Freeman**
-
-</td>
-</tr>
-<tr>
-<td align="center" width="50%">
-
-*"Make it work, make it right, make it fast."*
-
-**Kent Beck**
-
-</td>
-<td align="center" width="50%">
-
-*"Code never lies, comments sometimes do."*
-
-**Ron Jeffries**
-
-</td>
-</tr>
-</table>
-
-</div>
-
-## Connect & Support
-
-<div align="center">
-
-### Let's Build Something Together
-
-<p>
-  <a href="https://anandmishra.dev">
-    <img src="https://img.shields.io/badge/Portfolio-FF5E5B?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/>
-  </a>
-  <a href="https://www.linkedin.com/in/anand-mishra-a3a306225">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-  <a href="mailto:anandmishra3001@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-  </a>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=ts,js,py,nodejs,express,react,nextjs,redux,tailwind,mongodb,mysql,prisma,kafka,docker,kubernetes,nginx,prometheus,githubactions,aws,gcp,vercel,jest&perline=11" alt="Tech icons">
 </p>
+</details>
 
-<br/>
+## 📡 Live tail
 
-<table>
-<tr>
-<td align="center" width="50%">
+<!-- LIVE-TAIL:START -->
+```console
+$ tail -f /var/log/anand24mishra.log
+2026-11-26 00:00Z  INFO   boot          live tail installed — first sync pending
+```
+<sub>auto-updated by a GitHub Action</sub>
+<!-- LIVE-TAIL:END -->
 
-### Support My Work
+## 📈 Metrics
 
-If you find my projects helpful or interesting, consider supporting me!
+<div align="center">
+  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api?username=anand24mishra&show_icons=true&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&title_color=2f81f7&icon_color=3fb950&text_color=7d8590" alt="GitHub stats">
+  <img height="165" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=anand24mishra&layout=compact&theme=transparent&hide_border=true&langs_count=6&title_color=2f81f7&text_color=7d8590" alt="Top languages">
+</div>
 
-<a href="https://anandmishra.dev">
-  <img src="https://img.shields.io/badge/Visit_Portfolio-FF5E5B?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/>
-</a>
+## 👾 Incident response drill
 
-</td>
-<td align="center" width="50%">
+Bugs are invading production. Hold the line in **[Code Defender](https://anand-242003.github.io/contact-page/game.html)** — a tiny Space-Invaders-style game I built ([source](game.html)).
 
-### About Me
-
-Backend Developer | Bootcamp Learner  
-Building with MERN Stack  
-Open to Collaboration  
-Always Learning
-
-</td>
-</tr>
-</table>
-
-<img src="https://capsule-render.vercel.app/api?type=slice&color=0:434343,100:000000&height=120&section=footer"/>
-
+<div align="center">
+<sub><code>anand@prod:~$ exit 0</code> — thanks for stopping by. If something here resonates, <a href="mailto:anandmishra3001@gmail.com">say hi</a>.</sub>
 </div>
