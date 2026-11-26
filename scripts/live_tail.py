@@ -10,7 +10,6 @@ import os
 import re
 import sys
 import urllib.request
-from datetime import datetime, timezone
 from pathlib import Path
 
 README = Path(__file__).resolve().parent.parent / "README.md"
@@ -35,23 +34,23 @@ def describe(e, user):
     repo = repo.split("/", 1)[1] if repo.startswith(f"{user}/") else repo
     t = e["type"]
     if t == "PushEvent":
-        branch = (p.get("ref") or "").replace("refs/heads/", "")
-        return "INFO ", "push", f"{repo}" + (f" @ {branch}" if branch else "")
+        return f"Pushed to {repo}"
     if t == "PullRequestEvent":
         pr = p.get("pull_request") or {}
-        action = "merged" if p.get("action") == "closed" and pr.get("merged") else p.get("action", "")
-        level = "OK   " if action == "merged" else "INFO "
-        return level, f"pr.{action}", f"{repo}#{pr.get('number', p.get('number', '?'))}"
+        n = pr.get("number", p.get("number", "?"))
+        if p.get("action") == "closed" and pr.get("merged"):
+            return f"Merged PR #{n} in {repo}"
+        if p.get("action") == "opened":
+            return f"Opened PR #{n} in {repo}"
+        return None
     if t == "CreateEvent" and p.get("ref_type") == "repository":
-        return "OK   ", "deploy", f"new repo → {repo}"
+        return f"Created {repo}"
     if t == "ReleaseEvent":
-        return "OK   ", "release", f"{repo} {(p.get('release') or {}).get('tag_name', '')}".strip()
-    if t == "IssuesEvent":
-        return "WARN ", f"issue.{p.get('action', '')}", f"{repo}#{(p.get('issue') or {}).get('number', '?')}"
-    if t == "WatchEvent":
-        return "DEBUG", "star", repo
+        return f"Released {repo} {(p.get('release') or {}).get('tag_name', '')}".strip()
+    if t == "IssuesEvent" and p.get("action") == "opened":
+        return f"Opened issue #{(p.get('issue') or {}).get('number', '?')} in {repo}"
     if t == "ForkEvent":
-        return "DEBUG", "fork", repo
+        return f"Forked {repo}"
     return None
 
 
@@ -60,19 +59,16 @@ def render(events, user):
     # the events API is not strictly time-ordered; newest first
     for e in sorted(events, key=lambda e: e["created_at"], reverse=True):
         d = describe(e, user)
-        if not d or (d[1], d[2]) in seen:  # collapse repeated pushes to the same branch
+        if not d or d in seen:  # collapse repeated pushes to the same repo
             continue
-        seen.add((d[1], d[2]))
-        ts = datetime.strptime(e["created_at"], "%Y-%m-%dT%H:%M:%SZ").strftime("%Y-%m-%d %H:%M")
-        lines.append(f"{ts}Z  {d[0]}  {d[1]:<13} {d[2]}")
+        seen.add(d)
+        day = e["created_at"][:10]
+        lines.append(f"- {day}: {d}")
         if len(lines) == MAX_LINES:
             break
     if not lines:
-        lines = ["(quiet on the public wire — probably building something private)"]
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M")
-    body = "\n".join(lines)
-    return (f"{START}\n```console\n$ tail -f /var/log/{user}.log\n{body}\n```\n"
-            f"<sub>auto-updated by a GitHub Action · last sync {now} UTC</sub>\n{END}")
+        lines = ["- No recent public activity."]
+    return f"{START}\n" + "\n".join(lines) + f"\n\n<sub>Updated automatically from public GitHub activity.</sub>\n{END}"
 
 
 def main():
